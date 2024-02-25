@@ -1,10 +1,10 @@
 import './App.css';
-import BitcoinToUSD from "./components/BitcoinToUSD"
+import TopHead from './components/TopHead';
 
 function App() {
   return (
     <div className="App">
-     < BitcoinToUSD/>
+     < TopHead/>
     </div>
   );
 }

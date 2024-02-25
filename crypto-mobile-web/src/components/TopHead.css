@@ -1,0 +1,39 @@
+.TopHead{
+    background-color: blanchedalmond;
+    margin: 10px;
+    border-radius: 20px;
+}
+.my-logo{
+    height: 40px;
+    width: 40px; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+.heading{
+    display: flex;
+}
+.title{
+    margin-top:40px;
+}
+.btcValue{
+    margin-left: 50px;
+    margin-top:-30px
+}
+.usdValue{
+    color: grey;
+    margin-left: 50px;
+    margin-top:-10px
+}
+.usdRate{
+    display: flex;
+}
+.rate{
+    margin-left: 50px;
+    margin-top:-9px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 14px;
+}
