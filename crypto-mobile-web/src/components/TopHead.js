@@ -1,5 +1,5 @@
 import './TopHead.css';
-import BitcoinToUSD from "./BitcoinToUSD"
+import BitcoinToUSD from "./BitcoinToUSD";
 
 function TopHead() {
   return (

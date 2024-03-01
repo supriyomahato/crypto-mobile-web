@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import {LineChart, Line, XAxis, YAxis, Tooltip} from 'recharts';
+import {XAxis, YAxis, Tooltip, Area, AreaChart, ResponsiveContainer} from 'recharts';
 
-const API_URL ='https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=7';
+const API_URL ='https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=30';
 
 
 const MyLineChart = () => {
 
-    const[data,setData] = useState([]);
+     const[data,setData] = useState([]);
+     
     const[isLoading,setIsLoading]=useState(false);
     const[error,setError]=useState(null);
 
@@ -23,6 +24,7 @@ const MyLineChart = () => {
                     date: new Date(timestamp*1000).toISOString().slice(0,10),
                     value
                 }));
+              
                 setData(formattedData);
             }
             catch(error){setError(error);}
@@ -34,19 +36,34 @@ const MyLineChart = () => {
 
     if(isLoading)
     {
-        return <p>Loading data</p>
+        return <p>Loading...</p>
     }
     if(error){
-        return <p>Error</p>
+        return <p>Error!</p>
     }
 
     return(
-        <LineChart width={600} height={300} data={data}>
-            <XAxis dataKey="date"/>
-            <YAxis/>
-            <Line  type="monotone" dataKey="value" stroke="#8884d8"/>
-            <Tooltip/>
-        </LineChart>
+<ResponsiveContainer width="100%" aspect={1}>
+<AreaChart
+width={500}
+height={300}
+  data={data}
+margin={{ top: 5, right: 40, left: -40, bottom: 5 }}
+>
+  <XAxis dataKey="name" axisLine={false} tick={false}/>
+  <YAxis axisLine={false} tick={false}/>
+  <Tooltip />
+  <Area type="monotone" dataKey="value" stroke="#FFA590" fill="white" strokeWidth={3} strokeLinecap="round"  />
+</AreaChart>
+</ResponsiveContainer>
+        
+
+        // <LineChart width={600} height={300} data={data}>
+        //     <XAxis dataKey="date"/>
+        //     <YAxis/>
+        //     <Line dataKey="value" type="monotone" stroke="orange"/>
+        //     <Tooltip/>
+        // </LineChart>
     );
 };
 
