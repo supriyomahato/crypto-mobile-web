@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    
+  }
+  
+  .tab-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .tabs {
+    margin: 0.5rem;
+    text-align: center;
+    width: 25%;
+    background: #fff;
+    border-radius: 1rem;
+    border-color: #fff;
+  }
+  
+
+  .active-tabs {
+    background: grey;
+    
+  }
+  
+  .content {
+    background: white;
+    margin-left:20px;
+    margin-right:20px;
+    display: none;
+  }
+  
+  .active-content {
+    display: block;
+  }
+  
+  .card-title1 {
+    text-align: center;
+  }

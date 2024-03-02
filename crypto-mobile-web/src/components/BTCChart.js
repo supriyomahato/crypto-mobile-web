@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import {XAxis, YAxis, Tooltip, Area, AreaChart, ResponsiveContainer} from 'recharts';
+import './BTCChart.css';
 
 const API_URL ='https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=30';
 
 
-const MyLineChart = () => {
+const MyAreaChart = () => {
 
      const[data,setData] = useState([]);
      
@@ -43,12 +44,11 @@ const MyLineChart = () => {
     }
 
     return(
-<ResponsiveContainer width="100%" aspect={1}>
+<ResponsiveContainer className="chart-container" width="100%" aspect={1.7}>
 <AreaChart
-width={500}
-height={300}
+
   data={data}
-margin={{ top: 5, right: 40, left: -40, bottom: 5 }}
+margin={{ right: 40, left: -40}}
 >
   <XAxis dataKey="name" axisLine={false} tick={false}/>
   <YAxis axisLine={false} tick={false}/>
@@ -56,15 +56,8 @@ margin={{ top: 5, right: 40, left: -40, bottom: 5 }}
   <Area type="monotone" dataKey="value" stroke="#FFA590" fill="white" strokeWidth={3} strokeLinecap="round"  />
 </AreaChart>
 </ResponsiveContainer>
-        
 
-        // <LineChart width={600} height={300} data={data}>
-        //     <XAxis dataKey="date"/>
-        //     <YAxis/>
-        //     <Line dataKey="value" type="monotone" stroke="orange"/>
-        //     <Tooltip/>
-        // </LineChart>
     );
 };
 
-export default MyLineChart;
+export default MyAreaChart;
