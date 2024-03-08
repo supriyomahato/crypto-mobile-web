@@ -3,8 +3,10 @@ import BitcoinToUSD from "./BitcoinToUSD";
 
 function TopHead() {
   return (
-    <div className="TopHead">
-     < BitcoinToUSD/>
+    <div>
+      <div className="TopHead">
+      < BitcoinToUSD/>
+      </div>
     </div>
   );
 }

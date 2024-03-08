@@ -1,4 +1,16 @@
 .chart-container{
-    background-color: white;
+    background-color: #FFFFFF;
     border-radius: 0.5rem;
 }
+.higher-value {
+    float: right;
+    margin-right:20px;
+  }
+  .lower-value {
+    float: left;
+    margin-left:20px;
+    display: flex;
+  }
+  .dot-one{
+    margin-top: -105;
+  }
