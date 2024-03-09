@@ -1,10 +1,10 @@
 .chart-container{
-    background-color: #FFFFFF;
     border-radius: 0.5rem;
 }
 .higher-value {
     float: right;
     margin-right:20px;
+    display: flex;
   }
   .lower-value {
     float: left;
@@ -12,5 +12,32 @@
     display: flex;
   }
   .dot-one{
-    margin-top: -105;
+    margin-top: -65px;
+    color: red;
+    font-size: 35px;
+    padding-right: 5px;
   }
+  .dot-two{
+    margin-top: -65px;
+    color: green ;
+    font-size: 35px;
+    padding-right: 5px;
+  }
+  .btc-unit {
+    margin-left: 8px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.bottom-text {
+  display: flex;
+  margin-top: -108px;
+}
+
+  .dot-three{
+    color: orange ;
+    font-size: 35px;
+    margin-left:20px;
+  }
+

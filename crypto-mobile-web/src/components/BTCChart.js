@@ -50,20 +50,24 @@ const MyAreaChart = () => {
     <p>Lower: $4.895</p>
     </div>
     <div className='higher-value'>
-    <p>Lower: $6.897</p>
+    <div className='dot-two'><h2>.</h2></div>
+    <p>Higher: $6.897</p>
     </div>
 
-<AreaChart
+<AreaChart className='area-chart'
 
   data={data}
-margin={{ right: 40, left: -40}}
+  margin={{ right: 40, left: -60, bottom:14}}
 >
-
   <XAxis dataKey="name" axisLine={false} tick={false}/>
   <YAxis axisLine={false} tick={false}/>
   <Tooltip />
   <Area type="monotone" dataKey="value" stroke="#FFA590" fill="#FFF6ED" strokeWidth={3} strokeLinecap="round"  />
 </AreaChart>
+<div className='bottom-text'>
+<div className='dot-three'><h2>.</h2></div>
+<div className='btc-unit'><h3>1BTC=$5.483</h3></div>
+</div>
 </ResponsiveContainer>
 
     );
