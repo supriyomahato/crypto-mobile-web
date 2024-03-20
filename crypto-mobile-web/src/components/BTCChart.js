@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import {XAxis, YAxis, Tooltip, Area, AreaChart, ResponsiveContainer} from 'recharts';
 import './BTCChart.css';
 
-const API_URL ='https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=30';
+var API ='https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=';
 
+var btcValue = 5.483;
 
-const MyAreaChart = () => {
-
+const MyAreaChart = ({days}) => {
+     const API_URL = API + days
      const[data,setData] = useState([]);
      
     const[isLoading,setIsLoading]=useState(false);
@@ -66,7 +67,7 @@ const MyAreaChart = () => {
 </AreaChart>
 <div className='bottom-text'>
 <div className='dot-three'><h2>.</h2></div>
-<div className='btc-unit'><h3>1BTC=$5.483</h3></div>
+<div className='btc-unit'><p>1BTC=${btcValue}</p></div>
 </div>
 </ResponsiveContainer>
 

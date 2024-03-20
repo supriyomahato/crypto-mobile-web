@@ -37,16 +37,20 @@ function Tabs() {
       </div>
       <div className="content-tabs">
         <div className={toggleTab === 1 ? "content active-content" : "content"}>
-          <BTCChart/>
+          <BTCChart
+          days={1}/>
         </div>
         <div className={toggleTab === 2 ? "content active-content" : "content"}>
-        <BTCChart/>
+        <BTCChart
+        days={7}/>
         </div>
         <div className={toggleTab === 3 ? "content active-content" : "content"}>
-        <BTCChart/>
+        <BTCChart
+        days={30}/>
         </div>
         <div className={toggleTab === 4 ? "content active-content" : "content"}>
-        <BTCChart/>
+        <BTCChart
+        days={365}/>
         </div>
       </div>
     </div>
