@@ -11,7 +11,6 @@ function App() {
       <div className="top">< TopHead/></div>
       <div>
         <Tabs/>
-      <div><BottomButtons></BottomButtons></div>
       </div>
      
     </div>
